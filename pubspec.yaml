@@ -1,5 +1,5 @@
 name: gestao_atletas
-description: "Aplicativo nativo offline para gestão de atletas, turmas e chamadas com SQLite."
+description: "App nativo offline para controle de frequência de atletas"
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -9,10 +9,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  sqflite: ^2.3.0
-  path: ^1.8.3
-  intl: ^0.18.1
-  cupertino_icons: ^1.0.2
+  flutter_localizations:
+    sdk: flutter
+  sqflite: ^2.3.2
+  path: ^1.9.0
+  intl: ^0.19.0
+  cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
