@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Set up Java JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
           java-version: '17'
@@ -21,8 +21,11 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.x'
+          flutter-version: '3.22.x'
           channel: 'stable'
+
+      - name: Create Flutter Android Project Structure
+        run: flutter create . --platforms=android --org=com.gestao.atletas
 
       - name: Install dependencies
         run: flutter pub get
@@ -31,7 +34,7 @@ jobs:
         run: flutter build apk --release --no-tree-shake-icons
 
       - name: Upload APK Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: gestao-atletas-apk
+          name: GestaoAtletas-APK
           path: build/app/outputs/flutter-apk/app-release.apk
