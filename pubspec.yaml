@@ -1,5 +1,5 @@
 name: gestao_atletas
-description: "App nativo offline para controle de frequência de atletas"
+description: "Aplicativo nativo offline para gestão de atletas"
 publish_to: 'none'
 version: 1.0.0+1
 
